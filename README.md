@@ -11,6 +11,16 @@ For more details about how I performed the process to generate subdatasets, see 
 
 Ensure you have the environment set up. This project uses `uv` for dependency management.
 
+### Install uv
+
+If you haven't installed `uv` yet, run:
+
+```bash
+# On macOS and Linux.
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+For Windows or other methods, see the [official installation guide](https://docs.astral.sh/uv/getting-started/installation/).
 ```bash
 uv sync
 ```
