@@ -1,0 +1,14 @@
+[project]
+name = "jeopardy-subdataset-generator"
+version = "0.1.0"
+description = "Generate a subdataset from the Jeopardy! dataset"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "marimo>=0.18.4",
+    "matplotlib>=3.10.8",
+    "numpy>=2.3.5",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.8.0",
+    "spacy>=3.8.11",
+]
