@@ -39,6 +39,13 @@ To create lightweight benchmarks (~1000 samples) that statistically represent th
     *   `Round` (Game stage)
 *   **Implementation**: I used `sklearn.utils.resample` for efficient, replacement-enabled sampling that respects the proportional weight of every stratum in the original group.
 
+*   **Iterative Refinement (KL Divergence)**:
+    *   To ensure the generated subcategory is statistically representative, I implemented an iterative check using **Kullback-Leibler (KL) Divergence**.
+    *   The script calculates the KL Divergence for 'category', 'round', and 'value' between the sample and the original group.
+    *   If the divergence exceeds a threshold (0.75), the sampling is retried (up to 10 attempts) to find a subset that minimizes distribution drift.
+
+
+
 ## 4. Distribution Verification & Differences
 The quality of the curation is validated in `verify_subdatasets.py`. I explicitly measure how close the subsets are to the original data.
 
@@ -46,4 +53,4 @@ The quality of the curation is validated in `verify_subdatasets.py`. I explicitl
     *   *Result*: The charts show near-identical shape, confirming that the subdatasets preserve the structural characteristics of the original data.
 *   **Statistical Metric (KL Divergence)**: I calculate the **Kullback-Leibler (KL) Divergence** to quantify information loss.
     *   Low KL scores (near 0) indicate high representativeness.
-    *   I generate multiple candidate subdatasets (e.g., 20) and allow selection of the one with the lowest KL score, resulting in a subset that is statistically indistinguishable from the original group but 99% smaller in size.
+    *   I generate multiple candidate subdatasets (e.g., 20) and allow selection of the one with the lowest KL score, resulting in a subset that is statistically indistinguishable from the original group but smaller in size.
