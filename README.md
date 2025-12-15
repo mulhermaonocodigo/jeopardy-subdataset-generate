@@ -1,5 +1,10 @@
 # Jeopardy Dataset Analysis & Generation Pipeline
 
+![Python](https://img.shields.io/badge/python-3.12+-blue.svg)
+![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)
+![uv](https://img.shields.io/badge/uv-managed-purple.svg)
+![Marimo](https://img.shields.io/badge/made%20with-marimo-orange.svg)
+
 This project contains a set of Marimo notebooks to explore, classify, sampling, and verify subdatasets from Jeopardy questions.
 
 For more details about how I performed the process to generate subdatasets, see [Description.md](Description.md).
