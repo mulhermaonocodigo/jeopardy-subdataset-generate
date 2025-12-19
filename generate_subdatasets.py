@@ -121,7 +121,7 @@ def __(Path, create_stratified_sample, gc, group1, group2, group3, json):
                 group_df, 
                 sample_size=sample_size, 
                 random_seed=current_seed, 
-                stratify=group_df['round']  # EXPLICIT STRATIFICATION
+                stratify=group_df['round']  # EXPLICIT STRATIFICATION  #maybe better concat the 3 columns and stratify by that
             )
             
             # Check Distributions
